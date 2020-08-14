@@ -1,0 +1,99 @@
+
+
+################################################  1 - FACTORY  ################################################
+
+
+
+Problem Statement : 
+If client can directly instantiate any object in the application using new() keyword i.e if internal implementation of object creation is not hidden to the client
+If Object creation is scattered and repetitive in various parts of the code.
+
+Solution : 
+Factory means a class that is responsible for creating objects of other types.
+The Factory Method pattern suggests that you replace direct object construction calls (using the new operator) with calls to a special factory method. 
+Don’t worry: the objects are still created via the new operator, but it’s being called from within the factory method. 
+
+
+Components : 
+i)Client             : 
+ii)Factory            : Abstract class or Interface , having abstract method , which is called by client to create an object.
+iii)Factory Subclass  : Overides the factory's abstract-method and decides which class to instantiate at runtime
+
+
+Advantage : 
+Interface Segregation Principle 
+Single responsibility principle
+
+
+###########################################  2 - ABSTARCT FACTORY  ###############################################
+
+
+do we need to create families (or sets) of objects?
+
+
+Abstract Factory : Group of related individual factories is encapsulated under one Base Factory .
+
+Use Case : Bean Factory in Spring Framework 
+
+
+
+################################################  3 - SINGLETON ################################################
+
+
+  
+Problem Statement  :
+If a class is used by every other classes in the application,
+All Other class,to call its method  first needs to instantiate its object and then call its method 
+As the result there will be Many Objects of a same class in the HEAP , Not memory efficient 
+		  
+		  
+Solution : 
+If a class is used by every other classes in the application, make the class singleton i.e 
+there will be only one instance available to all classes 
+		   
+		   
+challenges  :  How to prevent Singleton Pattern from Reflection, Serialization and Cloning? 
+
+
+Use Case : 
+>Database Connection Class( we make Hibernate's Session Factory which is used to connect the Database ,  as singleton object)
+>Logging Class : Log4J
+ 
+
+
+
+
+################################################ 4 - BUILDER ################################################
+
+
+do we need to create families (or sets) of objects?
+
+Problem Statement  : 
+If application requires too many parametrized constructor i.e constructors with different member-variable-combinations used in any application 
+
+
+Solution : Builder pattern 
+
+
+Challenges : Thread safe Builder pattern 
+
+
+################################################ 4 - PROTOTYPE  ################################################
+
+
+
+Problem Statement : 
+When Object to create is very heavy and there are too many objects to create 
+Suppose we have an Object that loads data from database. Now we need to modify this data in our program multiple times, 
+so it’s not a good idea to create the Object using new keyword and load all the data again from database.
+
+
+Solution
+create a new object by copying fully-initialized existing object.
+>Shallow : 
+> Deep   
+
+  
+  
+  
+  

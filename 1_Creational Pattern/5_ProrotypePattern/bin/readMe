@@ -1,0 +1,35 @@
+
+                          SOURCE : https://springframework.guru/gang-of-four-design-patterns/prototype-pattern/
+
+  Address address = new Address("Karnataka", "Bangalore");
+  Employee employee1 = new Employee("Abhishek", address);
+  
+-------------------------------------------------------- 1)Reference Copy --------------------------------------------------------
+	
+  	
+  Employee employee2 = employee1; 
+  
+  System.out.println(employee1 == employee2);       //TRUE  : Both reference-variable points to same object in HEAP.
+  System.out.println(employee1.equals(employee2));  //TRUE  : Both Employee Object has same contents
+  
+  
+  -------------------------------------------------------- 2)Object Copy - Shallow Copy --------------------------------------------------------
+  
+  A shallow copy of an object 
+  -> copies the value of the primitive type.
+  -> copies the reference of the primitive type.
+  
+  Both the original and its clone refer to the same object and 
+  if either one modifies the referred object, the modification will be visible to the other. 
+  
+  This might result in unexpected behavior in an application.
+  
+  In such situation, you should perform a deep copy that makes copies of dynamically allocated memory pointed to by the reference type fields
+ 
+  
+  
+  
+  
+  
+  
+  3
