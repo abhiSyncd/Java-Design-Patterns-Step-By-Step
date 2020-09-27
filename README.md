@@ -26,8 +26,12 @@
          > Java 
          > Spring : Spring BeanFactory Container:which provides the basic support for DI 
   
-  **III - Singleton Pattern** 
+  **III - [Singleton Pattern](https://www.callicoder.com/java-singleton-design-pattern-example/)** 
   
+  
+          https://www.callicoder.com/java-singleton-design-pattern-example/
+          
+          
         - Problem Statement :
           If a class is used by every other classes in the application,
           Then all Other class to call its method first needs to instantiate its object and then call its method. 
