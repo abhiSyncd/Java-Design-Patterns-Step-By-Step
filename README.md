@@ -1,3 +1,5 @@
+https://levelup.gitconnected.com/the-state-design-pattern-to-implement-likes-and-dislikes-958389b379ff
+
 # 1 - CREATIONAL PATTERN
 
   **I - Factory Pattern.** 
