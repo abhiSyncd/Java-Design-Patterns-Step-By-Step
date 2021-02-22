@@ -1,4 +1,5 @@
-https://levelup.gitconnected.com/the-state-design-pattern-to-implement-likes-and-dislikes-958389b379ff
+     https://levelup.gitconnected.com/the-state-design-pattern-to-implement-likes-and-dislikes-958389b379ff
+     https://github.com/zhenyanghua/design-patterns
 
 # 1 - CREATIONAL PATTERN
 
