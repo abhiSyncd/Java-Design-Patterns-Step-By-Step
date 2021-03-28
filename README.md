@@ -7,7 +7,8 @@
   
        - Problem Statement : 
          Client should not directly instantiate any object in the application using new() keyword i.e 
-         Internal implementation of object creation should be hidden to the client.
+         > Internal implementation of object creation should be hidden to the client 
+         > Choose objects dynamically at run time
          
        - Solution :
           : Object-Creation should be done by a separate Class i.e Factory Class.
@@ -17,7 +18,9 @@
             -> PizzaFactorySubClass : Overides the factory's abstract-method and decides which 
                                       Pizza-class(Cheese or Chicken) to instantiate based on passed 
                                       String pizzaType at runtime. 
-              
+       - Use Case 
+         https://kousiknath.medium.com/design-patterns-different-approaches-to-use-factory-pattern-to-choose-objects-dynamically-at-run-71449bceecef
+         
   
   **II - Abstarct Factory Pattern.** 
   
