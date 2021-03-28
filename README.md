@@ -3,22 +3,43 @@
 
 # 1 - CREATIONAL PATTERN
 
-  **I - Factory Pattern.** 
+  **I - Static Factory Method Pattern.** 
   
-       - Problem Statement : 
+       - Problem : 
          Client should not directly instantiate any object in the application using new() keyword i.e 
          > Internal implementation of object creation should be hidden to the client 
-         > Choose objects dynamically at run time
+         > Choose objects dynamically at run time i.e 
+           If you need to instantiate one class or another based on some argument, system property or environment variable
          
        - Solution :
-          : Object-Creation should be done by a separate Class i.e Factory Class.
-          : Components : 
-            -> Client               : Calls PizzaFactory class by passing type of pizza it want to create. 
-            -> PizzaFactory Class   : Has an abstract method createPizza(String pizzaType)                       
-            -> PizzaFactorySubClass : Overides the factory's abstract-method and decides which 
-                                      Pizza-class(Cheese or Chicken) to instantiate based on passed 
-                                      String pizzaType at runtime. 
-       - Use Case 
+         Object-Creation should be done by a separate Class i.e Factory-Class.
+         This Factory-Class provides a public-static-factory-method,
+         which is simply a static method that returns an instance of the class based on some argument.
+         The most common example of a factory method is getInstance() method of any Singleton class, which many of you have already used. 
+        
+       - Constructor vs Static-Factory-Method 
+         Both Used to create an instance of a class.
+         Prefer Static-Factory-Method instead of constructor to create an instance of a class using some argument passed at run time.
+          
+       - Static-Factory-Method vs DI
+
+       - JDK Implementation of Static-Factory-Method
+         String value1 = String.valueOf(1);
+	    String value2 = String.valueOf(1.0L);
+	    String value3 = String.valueOf(true);
+	    String value4 = String.valueOf('a');
+
+	    Executors.newSingleThreadExecutor()
+         Executors.newFixedThreadPool(int poolsize)
+         Executors.newCachedThreadPool()
+         Executors.newScheduledThreadPool(int poolsize)
+            
+       - Examples 
+         Ex.1) 
+         Client               : Calls PizzaFactory class by passing type of pizza it want to create. 
+         PizzaFactory Class   : have a public-static-factory-method to create an instance of the class based on some argument.
+               
+         Ex.2) 
          https://kousiknath.medium.com/design-patterns-different-approaches-to-use-factory-pattern-to-choose-objects-dynamically-at-run-71449bceecef
          
   
