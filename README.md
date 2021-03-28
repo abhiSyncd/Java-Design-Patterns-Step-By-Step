@@ -245,7 +245,7 @@
           Then Restore it back the last saved state, when you resume your play.
  
  
-  **VII - Template and Strategy Pattern.**
+  **VII - Template and Strategy Pattern.**https://ravthiru.medium.com/strategy-design-pattern-with-in-spring-boot-application-2ff5a7486cd8
   
         - Problem Statement :
           An object has a method which can be excuted in many different ways 
