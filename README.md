@@ -11,17 +11,21 @@
       > Choose objects dynamically at run time i.e 
         If you need to instantiate one class or another based on some argument, system property or environment variable
          
+         
     - SOLUTION :
       Object-Creation should be done by a separate Class i.e Factory-Class.
       This Factory-Class provides a public-static-factory-method,
       which is simply a static method that returns an instance of the class based on some argument.
       The most common example of a factory method is getInstance() method of any Singleton class, which many of you have already used. 
-        
+       
+       
     - CONSTRUCTOR vs STATIC-FACTORY-METHOD
       Both Used to create an instance of a class.
       Prefer Static-Factory-Method instead of constructor to create an instance of a class using some argument passed at run time.
           
+          
      - STATIC-FACTORY-METHOD vs DEPENDENCY-INJECTION
+
 
      - JDK Implementation of Static-Factory-Method
        String value1 = String.valueOf(1);
@@ -33,7 +37,8 @@
        Executors.newFixedThreadPool(int poolsize)
        Executors.newCachedThreadPool()
        Executors.newScheduledThreadPool(int poolsize)
-            
+          
+          
      - Examples 
        Ex.1) 
        Client               : Calls PizzaFactory class by passing type of pizza it want to create. 
@@ -45,10 +50,15 @@
   
 ## II - Abstarct Factory Pattern
   
-       - Problem : 
-         If above scenario needs to be designed for related-Group of Pizza Classes(Veg and NonVeg).
-         Then Group of related individual factories is encapsulated under one Base Factory .
+    - PROBLEM :
+      Static Factory Method Pattern : Factory of Products 
+      Abstarct Factory Pattern      : Factory of factories 
+      If scenario discussed in Static Factory Method Pattern, needs to be designed for related-Group of Pizza Classes(Veg and NonVeg).
+      Then Group of related individual factories is encapsulated under one Base Factory .
       
+    - SOLUTION :
+
+
        - Use case 
          > Java 
          > Spring : Spring BeanFactory Container:which provides the basic support for DI 
