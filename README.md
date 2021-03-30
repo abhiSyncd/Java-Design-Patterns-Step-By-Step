@@ -304,26 +304,26 @@
         
   **VIII - Visitor Pattern.**
   
-        - Problem Statement : 
-          Suppose you have an Interface defined 'Interview' with below abstract methods
-           > getMaxMarks();
-           > getMinMarks();
+    - PROBLEM : 
+      Suppose you have an Interface defined 'Interview' with below abstract methods
+      > getMaxMarks();
+      > getMinMarks();
 
-          Now you have multiple classes implementing the 'Interview' interface 
-           >AptitudeRound   
-           >TechnicalRound  
-           >ManagerialRound 
+      Now you have multiple classes implementing the 'Interview' interface 
+      > AptitudeRound   
+      > TechnicalRound  
+      > ManagerialRound 
 
-          Now You need to add One more method in Interview Interface i.e getAverage() 
+      Now You need to add One more method in Interview Interface i.e getAverage() 
 
-          The problem is that you need to @Override getAverage() method in each of the classes 
-          that have implemented getAverage() 
+      The problem is that you need to @Override getAverage() method in each of the classes 
+      that have implemented getAverage() 
   
   
-        - Solution :
-           Vistor Pattern 
-           Note :After Java 8 Features : Default and static methods in Interface.
-                 Visitor pattern need is downsizing.
+    - SOLUTION :
+      Vistor Pattern 
+      Note : After Java 8 Features : Default and static methods in Interface.
+             Visitor pattern need is downsizing.
                      
   
   
