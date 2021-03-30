@@ -209,97 +209,98 @@
 
 **I - Chain Of Responsibility.**  
 
-       - Problem Statement : 
-         Client request goes through a chain of Handler classes arranged sequentially,
-         If one Handler class can't handle the request it passes the request to the next handler in the chain.
+    - PROBLEM : 
+      Client request goes through a chain of Handler classes arranged sequentially,
+      If one Handler class can't handle the request it passes the request to the next handler in the chain.
            
-        - Example :
-          There are different Handler classes defined sequentially in a chain,each handling files of different types.
-          If client sends file of type 'XML' to the application,It goes through the 
-          chain of handler classes sequentially.
-           -> If a handler class do not process XML file,it passes the request to next Handler class
-           -> Process goes on and If no Handler class is found,The defaultHandler class is called.
+     - SOLUTION :
+       There are different Handler classes defined sequentially in a chain,each handling files of different types.
+       If client sends file of type 'XML' to the application,It goes through the 
+       chain of handler classes sequentially.
+       > If a handler class do not process XML file,it passes the request to next Handler class
+       > Process goes on and If no Handler class is found,The defaultHandler class is called.
            
-         
+     - Implemntation :
+       > Spring : Security Filter Chain 
+
+
 **II - Command Pattern.**  
 
-        - Problem Statement : 
-          Client request is a 'command-object' which is passed to 'Invoker object'. 
-          Invoker object looks for the appropriate object which can handle this command and 
-          passes the command to the corresponding object which executes the command.
+    - PROBLEM 
+      Client request is a 'command-object' which is passed to 'Invoker object'. 
+      Invoker object looks for the appropriate object which can handle this command and 
+      passes the command to the corresponding object which executes the command.
         
-         - Example : 
-           command-objects : TurnTvOn | TurnTvOff | TurnAcOn | TurnAcOff | TurnAllOf  
-           Invoker Object  : RemoteControl : 
-                           : Client passes the command-object to Remote control 
-                           : RemoteControl sets and executes the command
+     - SOLUTION : 
+       command-objects : TurnTvOn | TurnTvOff | TurnAcOn | TurnAcOff | TurnAllOf  
+       Invoker Object  : RemoteControl : 
+                         > Client passes the command-object to Remote control 
+                         > RemoteControl sets and executes the command
            
  
  **III - Mediator Pattern.**  
  
-       - Problem Statement : 
-         Multiple Objects of same type no longer communicate directly with each other but 
-         instead communicate via Mediator 
+    - PROBLEM : 
+      Multiple Objects of same type no longer communicate directly with each other but 
+      Instead communicate via Mediator 
          
-       - Example : 
-         Multiple Person chatting in a Chatroom application.
-         Chatroom application here acts as an Mediator among multiple persons chatting.
+    - SOLUTION : 
+      Multiple Person chatting in a Chatroom application.
+      Chatroom application here acts as an Mediator among multiple persons chatting.
          
-       
-  
-  
+         
  **IV - Observer Pattern.** 
     
-        - Problem Statement : 
-          Subject(One Object of a type) maintains list of its Observers(Objects of another type)
-          If subject changes its state , All Observers are notified.
+    - PROBLEM : 
+      Subject(One Object of a type) maintains list of its Observers(Objects of another type)
+      If subject changes its state , All Observers are notified.
           
-        - Observer Pattern vs Publisher-Subscriber Pattern 
-          Publishers(Subject), do not send messages directly to Subscribers(Observers).
-          There is a third component, called broker or message broker or event bus, 
-          which is known by both the publisher and subscriber, which filters all incoming messages and 
-          distributes them accordingly.
+    - Observer Pattern vs Publisher-Subscriber Pattern 
+      Publishers(Subject), do not send messages directly to Subscribers(Observers).
+      There is a third component, called broker or message broker or event bus, 
+      which is known by both the publisher and subscriber, which filters all incoming messages and 
+      distributes them accordingly.
           
           
-         - Exmaple : Blog(Subject) publishes post
-                     Peoples(Observers) get the notification about the published post
+    - Exmaple : Blog(Subject) publishes post
+                Peoples(Observers) get the notification about the published post
          
           
           
   **V - State Pattern.** 
    
-        - Problem Statement :
-          An Object can be in many states and it can change its behaviour depending upon its current internal state
+    - PROBLEM 
+      An Object can be in many states and it can change its behaviour depending upon its current internal state
  
  
  
   **VI - Memento Pattern.** 
     
-        - Problem Statement :
-          A object needs to save its state at any point and 
-          Restore the last-saved-state of the object.
+    - PROBLEM :
+      A object needs to save its state at any point and 
+      Restore the last-saved-state of the object.
           
-        - Example
-          In Games(Pub-G),you can save your Player's state multiple times and 
-          Then Restore it back the last saved state, when you resume your play.
+    - SOLUTION
+      In Games(Pub-G),you can save your Player's state multiple times and 
+      Then Restore it back the last saved state, when you resume your play.
  
  
   **VII - Template and Strategy Pattern.**
   
-        - Problem Statement :
-          An object has a method which can be excuted in many different ways 
+    - PROBELM :
+      An object has a method which can be excuted in many different ways 
           
-        - Exmaple 1 : 
-          You need to sort an Array.
-          Array can be sorted using Insertion-Sort,Selection-Sort,Bubble-Sort etc.
-          where each sorting method has different algorithms.
-          You can select at runtime on which sorting algorithm you want to sort the array.
+    - Exmaple 1 : 
+      You need to sort an Array.
+      Array can be sorted using Insertion-Sort,Selection-Sort,Bubble-Sort etc.
+      where each sorting method has different algorithms.
+      You can select at runtime on which sorting algorithm you want to sort the array.
           
-        - Exmaple 2 : 
-          A user doing an online-shopping.
-          Payment can be done either by Cash-On-Delievery,Debit-Card,Credit-Card,PayTM etc,
-          each having its own implementation.
-          User can select at runtime on which payment method they want to pay with.
+    - Exmaple 2 : 
+      A user doing an online-shopping.
+      Payment can be done either by Cash-On-Delievery,Debit-Card,Credit-Card,PayTM etc,
+      each having its own implementation.
+      User can select at runtime on which payment method they want to pay with.
           
         
   **VIII - Visitor Pattern.**
