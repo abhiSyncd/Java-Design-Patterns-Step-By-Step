@@ -74,7 +74,7 @@
 ## III - [Singleton Pattern](https://www.callicoder.com/java-singleton-design-pattern-example/)
    
 
-    (a) PREREQUISITE : 
+        PREREQUISITE : 
         When we create an object of a class a memory is allocated in the RAM.
         > HEAP  : stores actual object|Instance 
         > Stack : stores Reference Variables of the Objects-stored-in-Heap
