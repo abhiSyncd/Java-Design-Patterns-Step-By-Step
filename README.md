@@ -13,6 +13,7 @@
          
          
     (b) SOLUTION :
+        Factory Class : 
         Object-Creation should be done by a separate Class i.e Factory-Class.
         This Factory-Class provides a public-static-factory-method,
         which is simply a static method that returns an instance of the class based on some argument.
@@ -50,37 +51,42 @@
   
 ## II - Abstarct Factory Pattern
   
-    - PROBLEM :
-      Static Factory Method Pattern : Factory of Products 
-      Abstarct Factory Pattern      : Factory of factories 
-      If scenario discussed in Static Factory Method Pattern, needs to be designed for related-Group of Pizza Classes(Veg and NonVeg).
-      Then Group of related individual factories is encapsulated under one Base Factory .
-      
-    - SOLUTION :
+    (a) PROBLEM :
+        Static Factory Method Pattern : Factory of Products 
+        Abstarct Factory Pattern      : Factory of factories 
+        If scenario discussed in Static Factory Method Pattern, needs to be designed for related-Group of Pizza Classes(Veg and NonVeg).
+        Then Group of related individual factories is encapsulated under one Base Factory .
+     
+     
+    (b) SOLUTION :
+        > Factory Class               : Abstract-Class|Interface with the abstract-method  
+        > Subclasses of Factory class : 
+          Each Subclass overides the factory-class-abstract-method and is responsible for object-creation of same type(Veg or Non-Veg pizza)
+          Each Subclass overides the factory-class's abstract-method and decides which class to instantiate based on some argument at runtime. 
 
 
-       - Use case 
-         > Java 
-         > Spring : Spring BeanFactory Container:which provides the basic support for DI 
+    (c) Implementation of Abstract-Factory-Pattern
+        > JDK    : javax.xml.parsers.DocumentBuilderFactory class 
+        > Spring : FactoryBean interface
+        
+        
   
 ## III - [Singleton Pattern](https://www.callicoder.com/java-singleton-design-pattern-example/)
   
-  
-          https://www.callicoder.com/java-singleton-design-pattern-example/
+    (a) PROBLEM :
+        If a class is used by every other classes in the application,
+        Then all Other class to call its method first needs to instantiate its object and then call its method.
+        As the result there will be Many Objects of a same class in the HEAP , Not memory efficient 
+         
+         
+    (b) SOLUTION
+        If a class is used by every other classes in the application, make the class singleton i.e 
+        there will be only one instance available to all classes.
           
-          
-        - Problem Statement :
-          If a class is used by every other classes in the application,
-          Then all Other class to call its method first needs to instantiate its object and then call its method. 
-          As the result there will be Many Objects of a same class in the HEAP , Not memory efficient 
-          
-        - Solution : 
-          If a class is used by every other classes in the application, make the class singleton i.e
-          there will be only one instance available to all classes.
-          
-          Singleton Pattern ensures that only a single instance of a class exists and a global point of access to it exists
-                    
-        - Use Case :
+        Singleton Pattern ensures that only a single instance of a class exists and a global point of access to it exists
+
+
+    (c) Implementation of Singleton Pattern
           > Caches, thread pools, Database are examples of objects that should only have a single instance.
           
           > Logging Class,
@@ -245,7 +251,7 @@
           Then Restore it back the last saved state, when you resume your play.
  
  
-  **VII - Template and Strategy Pattern.**https://ravthiru.medium.com/strategy-design-pattern-with-in-spring-boot-application-2ff5a7486cd8
+  **VII - Template and Strategy Pattern.**
   
         - Problem Statement :
           An object has a method which can be excuted in many different ways 
