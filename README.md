@@ -72,56 +72,89 @@
         
   
 ## III - [Singleton Pattern](https://www.callicoder.com/java-singleton-design-pattern-example/)
-  
+   
+
+    (a) PREREQUISITE : 
+        When we create an object of a class a memory is allocated in the RAM.
+        > HEAP  : stores actual object|Instance 
+        > Stack : stores Reference Variables of the Objects-stored-in-Heap
+       
+        What happen when  we create multiple object of a  Class?      
+        If we create multiple objects of the same class, multiple memory will be allocated to the same object but with different cell addresses in RAM.
+        Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
+        Source : https://www.c-sharpcorner.com/article/singleton/
+        
+        
     (a) PROBLEM :
         If a class is used by every other classes in the application,
         Then all Other class to call its method first needs to instantiate its object and then call its method.
-        As the result there will be Many Objects of a same class in the HEAP , Not memory efficient 
-         
-         
+        As the result there will be Many Objects of a same class in the HEAP.
+        Thus, in this way, the memory is wasted, while we create a new instance of a class in every call. 
+        
+        
+          
     (b) SOLUTION
         If a class is used by every other classes in the application, make the class singleton i.e 
-        there will be only one instance available to all classes.
-          
-        Singleton Pattern ensures that only a single instance of a class exists and a global point of access to it exists
+        Singleton Pattern ensures that only a single instance of a class exists and a global point of access to it exists.
+        Since, its a global access to all threads,we need to make it thread safe.
 
 
-    (c) Implementation of Singleton Pattern
-          > Caches, thread pools, Database are examples of objects that should only have a single instance.
-          
-          > Logging Class,
-            Database Connection Class : we make Hibernate's Session Factory which is used to connect the Database as singleton object.
-            
-          >JDK : Runtime class which provides getRuntime() method to get access of it and used to get free memory and total memory in Java.
-          
-          >Spring : Singleton is the default scope of the IOC container 
-                    creates exactly one instance of the object per spring IOC container. 
-         
-         - Best way to create Singleton class : ENUM
+    (c) Steps to Implement Singleton :
+        - Private Constructor
+          Declare a private constructor for the class for which you want to make Singleton.
+          A private constructor cannot be inherited and its not possible to instantiate it from outside
+   
+        - Static Member (Variable and Method)
+          > Declare a static-variable for that class.
+          > Create a static-method for that class and assign the Object to the declared-static-variable.
+            The only way to get an instance is to call this static method.
+    
+    
+    (d) CHALLENGES and SOLUTIONS 
+        - Thread Safe 
+        - Reflection Safe
+        - Serailzable Safe
+        - Clonable Safe
+       
+       
+    (d)Singleton Using ENUM : Best way to create a Singleton class
+       https://dzone.com/articles/java-singletons-using-enum
+     
+     
+    (e) Implementation of Singleton Pattern
+        - JDK Implementation of Static-Factory-Method
+          > java.lang.Runtime#getRuntime()
+          > java.awt.Desktop#getDesktop()
+        
+     
+     (f) Use Cases  
+        > Caches, thread pools, Database are examples of objects that should only have a single instance.
+        > Logging Class,
+          Database Connection Class : we make Hibernate's Session Factory which is used to connect the Database as singleton object.
   
   
 ## IV - Builder Pattern
       
-       - Problem Statement :
-         If application requires too many parametrized constructor 
-         i.e constructors with different member-variable-combinations.
+    - PROBLEM :
+      If application requires too many parametrized constructor 
+      i.e constructors with different member-variable-combinations.
   
-       - Solution : 
-         Lombok library has an @Builder annotation which solves such scenarios.
+    - SOLUTION : 
+      Lombok library has an @Builder annotation which solves such scenarios.
        
 
 ## V  - Prototype Pattern
 
-          - Problem Statement :
-            When Object to create is very heavy and there are too many objects to create.
-            Suppose we have an Method that loads an Heavy-Object from database. 
-            Now we need to modify this Heavy-Object in our program multiple times.
-            it’s not a good idea to load Heavy-Object again from database.
+    - PROBLEM :
+      When Object to create is very heavy and there are too many objects to create.
+      Suppose we have an Method that loads an Heavy-Object from database. 
+      Now we need to modify this Heavy-Object in our program multiple times.
+      So, it’s not a good idea to load Heavy-Object again from database.
             
-          - Solution
-            create a new object by copying fully-initialized existing object.
-            >Shallow  
-            >Deep  
+    - SOLUTION
+      create a new object by copying fully-initialized existing object.
+      >Shallow  
+      >Deep  
 
 
 # 2 - STRUCTURAL PATTERN
