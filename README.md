@@ -83,7 +83,7 @@
     Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
     Source : https://www.c-sharpcorner.com/article/singleton/
         
-        
+#        
     (a) PROBLEM :
         If a class is used by every other classes in the application,
         Then all Other class to call its method first needs to instantiate its object and then call its method.
