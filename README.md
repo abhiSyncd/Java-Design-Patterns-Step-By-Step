@@ -73,16 +73,15 @@
   
 ## III - [Singleton Pattern](https://www.callicoder.com/java-singleton-design-pattern-example/)
    
-
-        PREREQUISITE : 
-        When we create an object of a class a memory is allocated in the RAM.
-        > HEAP  : stores actual object|Instance 
-        > Stack : stores Reference Variables of the Objects-stored-in-Heap
+    PREREQUISITE : 
+    When we create an object of a class a memory is allocated in the RAM.
+    > HEAP  : stores actual object|Instance 
+    > Stack : stores Reference Variables of the Objects-stored-in-Heap
        
-        What happen when  we create multiple object of a  Class?      
-        If we create multiple objects of the same class, multiple memory will be allocated to the same object but with different cell addresses in RAM.
-        Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
-        Source : https://www.c-sharpcorner.com/article/singleton/
+    What happen when  we create multiple object of a  Class?      
+    If we create multiple objects of the same class, multiple memory will be allocated to the same object but with different cell addresses in RAM.
+    Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
+    Source : https://www.c-sharpcorner.com/article/singleton/
         
         
     (a) PROBLEM :
