@@ -1,6 +1,7 @@
      https://levelup.gitconnected.com/the-state-design-pattern-to-implement-likes-and-dislikes-958389b379ff
      https://github.com/zhenyanghua/design-patterns
 
+#
 # 1 - CREATIONAL PATTERN
 
 ## I - Static Factory Method Pattern
@@ -156,13 +157,13 @@
       >Shallow  
       >Deep  
 
-
+#
 # 2 - STRUCTURAL PATTERN
 
-**I - Adapter Pattern.**  
+## I - Adapter Pattern 
 
 
-**II - Decorator Pattern.** 
+## II - Decorator Pattern 
 
       - Problem Statement : 
         You need to add functionality to a specific object instead of an entire class of objects.
@@ -177,7 +178,7 @@
         >Special Car : which has Basic-Car-Features + Sport-Car-Features + Luxury-Car-Features
 
 
-**III - Facade Pattern.**  
+## III - Facade Pattern 
 
        - Problem Statement : 
          If an application has a number of interfaces that perform similar kind of jobs.
@@ -189,7 +190,7 @@
          Note : Application must be extensible to add more Data-Sources and Generate other types of reports
                 
          
-**IV - Proxy Pattern.** 
+## IV - Proxy Pattern 
        
        - Problem Statement : 
          There are many objects to be created but the object creation is expensive.
@@ -204,10 +205,10 @@
           > Spring :  AOP
 
 
-
+#
 # 3 - BEHAVIORAL PATTERN
 
-**I - Chain Of Responsibility.**  
+## I - Chain Of Responsibility 
 
     - PROBLEM : 
       Client request goes through a chain of Handler classes arranged sequentially,
@@ -224,7 +225,7 @@
        > Spring : Security Filter Chain 
 
 
-**II - Command Pattern.**  
+## II - Command Pattern 
 
     - PROBLEM 
       Client request is a 'command-object' which is passed to 'Invoker object'. 
@@ -238,7 +239,7 @@
                          > RemoteControl sets and executes the command
            
  
- **III - Mediator Pattern.**  
+ ## III - Mediator Pattern  
  
     - PROBLEM : 
       Multiple Objects of same type no longer communicate directly with each other but 
@@ -249,7 +250,7 @@
       Chatroom application here acts as an Mediator among multiple persons chatting.
          
          
- **IV - Observer Pattern.** 
+ ## IV - Observer Pattern
     
     - PROBLEM : 
       Subject(One Object of a type) maintains list of its Observers(Objects of another type)
@@ -267,14 +268,14 @@
          
           
           
-  **V - State Pattern.** 
+  ## V - State Pattern
    
     - PROBLEM 
       An Object can be in many states and it can change its behaviour depending upon its current internal state
  
  
  
-  **VI - Memento Pattern.** 
+  ## VI - Memento Pattern 
     
     - PROBLEM :
       A object needs to save its state at any point and 
@@ -285,7 +286,7 @@
       Then Restore it back the last saved state, when you resume your play.
  
  
-  **VII - Template and Strategy Pattern.**
+  ## VII - Template and Strategy Pattern
   
     - PROBELM :
       An object has a method which can be excuted in many different ways 
@@ -303,7 +304,7 @@
       User can select at runtime on which payment method they want to pay with.
           
         
-  **VIII - Visitor Pattern.**
+  ## VIII - Visitor Pattern
   
     - PROBLEM : 
       Suppose you have an Interface defined 'Interview' with below abstract methods
@@ -325,15 +326,3 @@
       Vistor Pattern 
       Note : After Java 8 Features : Default and static methods in Interface.
              Visitor pattern need is downsizing.
-                     
-  
-  
-  
-  
-  
-  
-  
- 
-       
-       
- 
