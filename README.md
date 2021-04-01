@@ -119,8 +119,28 @@
        
        
     (d)Singleton Using ENUM : Best way to create a Singleton class
-       https://dzone.com/articles/java-singletons-using-enum
+
+        public enum SingletonEnum {
+           INSTANCE;
+
+           int value;
+
+           public int getValue() {
+              return value;
+           }
+
+           public void setValue(int value) {
+              this.value = value;
+           }
+       }
      
+       //Calling From Another Class : 
+         SingletonEnum.INSTANCE.getValue();
+         
+         Source : 
+         https://dzone.com/articles/java-singletons-using-enum
+         
+
      
     (e) Implementation of Singleton Pattern
         - JDK Implementation of Static-Factory-Method
