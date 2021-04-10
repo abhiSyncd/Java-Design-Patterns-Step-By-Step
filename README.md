@@ -51,7 +51,7 @@
          https://kousiknath.medium.com/design-patterns-different-approaches-to-use-factory-pattern-to-choose-objects-dynamically-at-run-71449bceecef
          
   
-## II - Abstarct Factory Pattern
+## II - Abstract Factory Pattern
   
     (a) PROBLEM :
         Static Factory Method Pattern : Factory of Products 
