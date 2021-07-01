@@ -1,6 +1,4 @@
-     Youtibe : Optimus Growth : Must See
-     https://levelup.gitconnected.com/the-state-design-pattern-to-implement-likes-and-dislikes-958389b379ff
-     https://github.com/zhenyanghua/design-patterns
+
 
 #
 # 1 - CREATIONAL PATTERN
@@ -347,3 +345,10 @@
       Vistor Pattern 
       Note : After Java 8 Features : Default and static methods in Interface.
              Visitor pattern need is downsizing.
+
+# 
+     For more info : 
+     Youtube : Optimus Growth : Must See
+     https://levelup.gitconnected.com/the-state-design-pattern-to-implement-likes-and-dislikes-958389b379ff
+     https://github.com/zhenyanghua/design-patterns
+     
