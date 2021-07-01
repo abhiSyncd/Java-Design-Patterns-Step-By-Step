@@ -3,7 +3,7 @@
 #
 # 1 - CREATIONAL PATTERN
 
-## I - Static Factory Method Pattern
+## I - [Static Factory Method Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/1_Creational_1_StaticFactory_a.png)
   
     (a) PROBLEM : 
         Client should not directly instantiate any object in the application using new() keyword i.e 
@@ -49,7 +49,7 @@
          https://kousiknath.medium.com/design-patterns-different-approaches-to-use-factory-pattern-to-choose-objects-dynamically-at-run-71449bceecef
          
   
-## II - Abstract Factory Pattern
+## II - [Abstract Factory Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/1_Creational_2_AbstractFactory.png)
   
     (a) PROBLEM :
         Static Factory Method Pattern : Factory of Products 
@@ -71,7 +71,7 @@
         
         
   
-## III - [Singleton Pattern](https://www.callicoder.com/java-singleton-design-pattern-example/)
+## III - [Singleton Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/1_Creational_3_Singleton_a.png)
    
     PREREQUISITE : 
     When we create an object of a class a memory is allocated in the RAM.
@@ -82,7 +82,9 @@
     If we create multiple objects of the same class, multiple memory will be allocated to the same object but with different cell addresses in RAM.
     Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
     
-    Source : https://www.c-sharpcorner.com/article/singleton/
+    Source : 
+    https://www.c-sharpcorner.com/article/singleton/
+    https://www.callicoder.com/java-singleton-design-pattern-example/
         
 #        
     (a) PROBLEM :
@@ -163,7 +165,7 @@
       Lombok library has an @Builder annotation which solves such scenarios.
        
 
-## V  - Prototype Pattern
+## V  - [Prototype Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/1_Creational_5_Prototype.png)
 
     - PROBLEM :
       When Object to create is very heavy and there are too many objects to create.
@@ -179,10 +181,10 @@
 #
 # 2 - STRUCTURAL PATTERN
 
-## I - Adapter Pattern 
+## I - [Adapter Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/2_Structural_1_Adapter.png)
 
 
-## II - Decorator Pattern 
+## II - [Decorator Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/2_Structural_2_Decorator.png) 
 
       - Problem Statement : 
         You need to add functionality to a specific object instead of an entire class of objects.
@@ -197,7 +199,7 @@
         >Special Car : which has Basic-Car-Features + Sport-Car-Features + Luxury-Car-Features
 
 
-## III - Facade Pattern 
+## III - [Facade Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/2_Structural_3_Facade.png)
 
        - Problem Statement : 
          If an application has a number of interfaces that perform similar kind of jobs.
@@ -209,7 +211,7 @@
          Note : Application must be extensible to add more Data-Sources and Generate other types of reports
                 
          
-## IV - Proxy Pattern 
+## IV - [Proxy Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/2_Structural_4_Proxy.png)
        
        - Problem Statement : 
          There are many objects to be created but the object creation is expensive.
@@ -227,7 +229,7 @@
 #
 # 3 - BEHAVIORAL PATTERN
 
-## I - Chain Of Responsibility 
+## I - [Chain Of Responsibility](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_1_ChainOf%20Responsibility.png)
 
     - PROBLEM : 
       Client request goes through a chain of Handler classes arranged sequentially,
@@ -244,7 +246,7 @@
        > Spring : Security Filter Chain 
 
 
-## II - Command Pattern 
+## II - [Command Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_2_Command.png) 
 
     - PROBLEM 
       Client request is a 'command-object' which is passed to 'Invoker object'. 
@@ -258,7 +260,7 @@
                          > RemoteControl sets and executes the command
            
  
- ## III - Mediator Pattern  
+ ## III - [Mediator Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_3_Mediator.png)  
  
     - PROBLEM : 
       Multiple Objects of same type no longer communicate directly with each other but 
@@ -269,7 +271,7 @@
       Chatroom application here acts as an Mediator among multiple persons chatting.
          
          
- ## IV - Observer Pattern
+ ## IV - [Observer Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_4_Observer.png)
     
     - PROBLEM : 
       Subject(One Object of a type) maintains list of its Observers(Objects of another type)
@@ -287,14 +289,14 @@
          
           
           
-  ## V - State Pattern
+  ## V - [State Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_5_State.png)
    
     - PROBLEM 
       An Object can be in many states and it can change its behaviour depending upon its current internal state
  
  
  
-  ## VI - Memento Pattern 
+  ## VI - [Memento Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_6_Memento.png)
     
     - PROBLEM :
       A object needs to save its state at any point and 
@@ -305,7 +307,7 @@
       Then Restore it back the last saved state, when you resume your play.
  
  
-  ## VII - Template and Strategy Pattern
+  ## VII - [Template and Strategy Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_7_Strategy.png)
   
     - PROBELM :
       An object has a method which can be excuted in many different ways 
@@ -323,7 +325,7 @@
       User can select at runtime on which payment method they want to pay with.
           
         
-  ## VIII - Visitor Pattern
+  ## VIII - [Visitor Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/3_Behavior_8_Visitor.png)
   
     - PROBLEM : 
       Suppose you have an Interface defined 'Interview' with below abstract methods
