@@ -82,7 +82,8 @@
     If we create multiple objects of the same class, multiple memory will be allocated to the same object but with different cell addresses in RAM.
     Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
     
-    Source : 
+    Source :
+    https://dzone.com/articles/java-singletons-using-enum  : Testing Singleton
     https://www.c-sharpcorner.com/article/singleton/
     https://www.callicoder.com/java-singleton-design-pattern-example/
         
