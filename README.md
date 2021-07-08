@@ -71,7 +71,7 @@
         
         
   
-## III - [Singleton Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/1_Creational_3_Singleton_a.png)
+## III - [Singleton Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/1_Creational_3_Singleton_b.png)
    
     PREREQUISITE : 
     When we create an object of a class a memory is allocated in the RAM.
