@@ -125,29 +125,29 @@
  
       Using ENUM
     
- **(f) Testing Singleton**
+ **(f) [Testing Singleton](https://dzone.com/articles/prevent-breaking-a-singleton-class-pattern)**
  
-        @Test
-        public void testThreadSafeSingleton() throws InterruptedException {
+      @Test
+      public void testThreadSafeSingleton() throws InterruptedException {
 
-            int threadsAmount = 500;
-            Set < CustomerDao > singletonSet = Collections.newSetFromMap(new ConcurrentHashMap < > ());
-            ExecutorService executorService = Executors.newFixedThreadPool(threadsAmount);
+          int threadsAmount = 500;
+          Set < Integer > singletonSet = new HashSet < > ();
+          ExecutorService executorService = Executors.newFixedThreadPool(threadsAmount);
 
-            for (int i = 0; i < threadsAmount; i++) {
-                executorService.execute(() - > {
-                    CustomerDao singleton = CustomerDao.getInstance();
-                    singletonSet.add(singleton);
-                });
-            }
+          for (int i = 0; i < threadsAmount; i++) {
+              executorService.execute(() -> {
+                  Singleton singleton = Singleton.getInstance();
+                  singletonSet.add(singleton.hashCode());
+              });
+          }
 
-            executorService.shutdown();
-            executorService.awaitTermination(1, TimeUnit.MINUTES);
+          executorService.shutdown();
+          executorService.awaitTermination(1, TimeUnit.MINUTES); // Execute Below statement After All threads are completed
 
-            assertEquals(1, singletonSet.size(), "");
-        }
-          
-     
+          assertEquals(1, singletonSet.size(), "");
+      }
+      
+      
  **(g) Implementation of Singleton Pattern**
  
         - JDK Implementation of Static-Factory-Method
