@@ -79,7 +79,8 @@
     > Stack : stores Reference Variables of the Objects-stored-in-Heap
        
     What happen when  we create multiple object of a  Class?      
-    If we create multiple objects of the same class, multiple memory will be allocated to the same object but with different cell addresses in RAM.
+    If we create multiple objects of the same class, 
+    Multiple memory will be allocated to the same object but with different cell addresses in RAM.
     Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
     
     Source :
