@@ -73,7 +73,8 @@
   
 ## III - [Singleton Pattern](https://github.com/abhiSyncd/Java-Design-Patterns-Step-By-Step/blob/master/4_Image_Repo/1_Creational_3_Singleton_b.png)
    
-    PREREQUISITE : 
+   **(a) PREREQUISITE :**
+   
     When we create an object of a class a memory is allocated in the RAM.
     > HEAP  : stores actual object|Instance 
     > Stack : stores Reference Variables of the Objects-stored-in-Heap
@@ -87,8 +88,9 @@
     https://dzone.com/articles/java-singletons-using-enum  : Testing Singleton
     https://www.c-sharpcorner.com/article/singleton/
     https://www.callicoder.com/java-singleton-design-pattern-example/
-        
-#        
+            
+ **Problem && Solutions
+ 
     (a) PROBLEM :
         If a class is used by every other classes in the application,
         Then all Other class to call its method first needs to instantiate its object and then call its method.
