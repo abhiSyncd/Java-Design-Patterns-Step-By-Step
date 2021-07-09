@@ -89,23 +89,20 @@
     https://www.c-sharpcorner.com/article/singleton/
     https://www.callicoder.com/java-singleton-design-pattern-example/
             
- **(b) Problem && Solutions**
+ **(b) Need**
  
-    (a) PROBLEM :
-        If a class is used by every other classes in the application,
-        Then all Other class to call its method first needs to instantiate its object and then call its method.
-        As the result there will be Many Objects of a same class in the HEAP.
-        Thus, in this way, the memory is wasted, while we create a new instance of a class in every call. 
+    PROBLEM : If a class is used by every other classes in the application,
+              Then all Other class to call its method first needs to instantiate its object and then call its method.
+              As the result there will be Many Objects of a same class in the HEAP.
+              Thus, in this way, the memory is wasted, while we create a new instance of a class in every call. 
         
-        
-          
-    (b) SOLUTION
-        If a class is used by every other classes in the application, make the class singleton i.e 
-        Singleton Pattern ensures that only a single instance of a class exists and a global point of access to it exists.
-        Since, its a global access to all threads,we need to make it thread safe.
+    SOLUTION : If a class is used by every other classes in the application, make the class singleton i.e 
+               Singleton Pattern ensures that only a single instance of a class exists and a global point of access to it exists.
+               Since, its a global access to all threads,we need to make it thread safe.
 
 
-    (c) Steps to Implement Singleton :
+  **(c) Steps to Implement Singleton**
+
         - Private Constructor
           Declare a private constructor for the class for which you want to make Singleton.
           A private constructor cannot be inherited and its not possible to instantiate it from outside
@@ -116,16 +113,20 @@
             The only way to get an instance is to call this static method.
     
     
-    (d) CHALLENGES and SOLUTIONS 
-        - Thread Safe 
+ **(d) CHALLENGES and SOLUTIONS**
+ 
+        - Thread Safety 
         - Reflection Safe
         - Serailzable Safe
         - Clonable Safe
        
        
-    (d) Singleton Using ENUM : Best way to create a Singleton class
+ **(e) Best way to create a Singleton class**
+ 
+      Using ENUM
     
-    (e) Testing Singleton
+ **(f) Testing Singleton **
+ 
         @Test
         public void testThreadSafeSingleton() throws InterruptedException {
 
@@ -147,13 +148,15 @@
         }
           
      
-    (e) Implementation of Singleton Pattern
+ **(g) Implementation of Singleton Pattern**
+ 
         - JDK Implementation of Static-Factory-Method
           > java.lang.Runtime#getRuntime()
           > java.awt.Desktop#getDesktop()
         
      
-     (f) Use Cases  
+ **(h) Use Cases**
+ 
         > Caches, thread pools, Database are examples of objects that should only have a single instance.
         > Logging Class,
           Database Connection Class : we make Hibernate's Session Factory which is used to connect the Database as singleton object.
