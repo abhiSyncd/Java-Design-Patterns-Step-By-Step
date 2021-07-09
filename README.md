@@ -125,7 +125,7 @@
  
       Using ENUM
     
- **(f) Testing Singleton **
+ **(f) Testing Singleton**
  
         @Test
         public void testThreadSafeSingleton() throws InterruptedException {
