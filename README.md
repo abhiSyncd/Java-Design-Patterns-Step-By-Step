@@ -129,7 +129,8 @@
           > Declare a static-variable for that class.
           > Create a static-method for that class and assign the Object to the declared-static-variable.
             The only way to get an instance is to call this static method.
-    
+         
+        - For More Info : Refer Diagram
     
  **(d) CHALLENGES and SOLUTIONS**
  
