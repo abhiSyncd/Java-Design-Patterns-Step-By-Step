@@ -75,19 +75,37 @@
    
    **(a) PREREQUISITE :**
    
-    When we create an object of a class a memory is allocated in the RAM.
-    > HEAP  : stores actual object|Instance 
-    > Stack : stores Reference Variables of the Objects-stored-in-Heap
+    - When we create an object of a class a memory is allocated in the RAM.
+      > HEAP  : stores actual object|Instance 
+      > Stack : stores Reference Variables of the Objects-stored-in-Heap
        
-    What happen when  we create multiple object of a  Class?      
-    If we create multiple objects of the same class, 
-    Multiple memory will be allocated to the same object but with different cell addresses in RAM.
-    Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
+    - What happen when  we create multiple object of a  Class?      
+      If we create multiple objects of the same class, 
+      Multiple memory will be allocated to the same object but with different cell addresses in RAM.
+      Thus, in this way, the memory is wasted, while we create a new instance of a class in every call
     
-    Source :
-    https://dzone.com/articles/java-singletons-using-enum  : Testing Singleton
-    https://www.c-sharpcorner.com/article/singleton/
-    https://www.callicoder.com/java-singleton-design-pattern-example/
+    - Object-level-lock vs Class-Level-Lock vs Singleton
+      > Object level lock
+        When we want to synchronize a non-static-method-or-codeBlock such that
+        Only one thread will be able to execute the code block ON GIVEN INSTANCE OF THAT CLASS.
+      
+      > Class Level Lock
+        Prevents multiple threads to enter in synchronized-block in any of ALL AVAILABLE INSTANCES OF THE CLASS on runtime.
+        This means if in runtime there are 100 instances of DemoClass,
+        This means if in runtime there are 100 instances of DemoClass,
+        all other instances will be locked for other threads.
+        
+      > Singleton
+        Restricts the instantiation of a class to one object.
+        Please note singleton pattern will not apply lock on the object.
+        For example
+        2 different threads are sharing the same single object reference and
+        can call the different method on that single object simultaneously.
+      
+    - For More Info : 
+      https://dzone.com/articles/java-singletons-using-enum  : Testing Singleton
+      https://www.c-sharpcorner.com/article/singleton/
+      https://www.callicoder.com/java-singleton-design-pattern-example/
             
  **(b) Need**
  
