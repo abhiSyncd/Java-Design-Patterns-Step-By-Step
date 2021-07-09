@@ -89,7 +89,7 @@
     https://www.c-sharpcorner.com/article/singleton/
     https://www.callicoder.com/java-singleton-design-pattern-example/
             
- **Problem && Solutions
+ **(b) Problem && Solutions**
  
     (a) PROBLEM :
         If a class is used by every other classes in the application,
