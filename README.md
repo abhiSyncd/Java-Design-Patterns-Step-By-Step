@@ -121,29 +121,29 @@
         - Clonable Safe
        
        
-    (d)Singleton Using ENUM : Best way to create a Singleton class
+    (d) Singleton Using ENUM : Best way to create a Singleton class
+    
+    (e) Testing Singleton
+        @Test
+        public void testThreadSafeSingleton() throws InterruptedException {
 
-        public enum SingletonEnum {
-           INSTANCE;
+            int threadsAmount = 500;
+            Set < CustomerDao > singletonSet = Collections.newSetFromMap(new ConcurrentHashMap < > ());
+            ExecutorService executorService = Executors.newFixedThreadPool(threadsAmount);
 
-           int value;
+            for (int i = 0; i < threadsAmount; i++) {
+                executorService.execute(() - > {
+                    CustomerDao singleton = CustomerDao.getInstance();
+                    singletonSet.add(singleton);
+                });
+            }
 
-           public int getValue() {
-              return value;
-           }
+            executorService.shutdown();
+            executorService.awaitTermination(1, TimeUnit.MINUTES);
 
-           public void setValue(int value) {
-              this.value = value;
-           }
-       }
-     
-       //Calling From Another Class : 
-         SingletonEnum.INSTANCE.getValue();
-         
-         Source : 
-         https://dzone.com/articles/java-singletons-using-enum
-         
-
+            assertEquals(1, singletonSet.size(), "");
+        }
+          
      
     (e) Implementation of Singleton Pattern
         - JDK Implementation of Static-Factory-Method
